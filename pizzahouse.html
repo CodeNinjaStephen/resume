@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/aos-master/dist/aos.css" />
+    <link rel="stylesheet" href="css/piz.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </head>
+  <style>
+    .mainbg {
+      background: url(image/pizza3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 0px 0px 100px 0px;
+      /* background-position: center; */
+    }
+    .try {
+      backdrop-filter: blur(10px);
+      /* background-color: black;
+      opacity: 0.5; */
+      background-color: rgba(184, 163, 163, 0.5);
+    }
+    .icon {
+      color: #fff;
+    }
+    .smallbg {
+      background: linear-gradient(
+          rgba(107, 196, 95, 0.5),
+          rgba(107, 196, 95, 0.5)
+        ),
+        url(image/pizz2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <body>
+    <div id="home" class="w-full min-h-screen pb-[15px] mainbg">
+      <!-- header  -->
+      <header
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        class="w-full fixed md:static h-[70px] z-[100000] flex place-content-center items-center"
+      >
+        <header
+          class="flex md:overflow-hidden try rounded-2xl z-[100] py-[5px] px-[10px] mx-auto items-center justify-between w-[95%] md:w-[95%] h-[50px]"
+        >
+          <span
+            class="md:w-[15%] text-green-500 text-start font-extrabold text-xl cursor-pointer w-[25%]"
+            >Pizza<span
+              style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+              "
+              class="text-white text-base"
+              >House.</span
+            ></span
+          >
+          <nav
+            class="nav_links md:static md:min-h-fit h-screen md:w-auto md:items-center md:bg-transparent flex md:flex-row lg:bg-transparent bg-black w-[70%] duration-[0.5s] md:z-0 z-[100] text-start py-[10px] flex-col absolute top-[0%] left-[-100%]"
+          >
+            <span
+              class="md:w-[15%] text-green-500 font-extrabold text-xl md:hidden block text-start cursor-pointer pl-[20px] py-[5px] h-[60px]"
+              >Pizza<span
+                style="font-family: cursive"
+                class="text-white text-sm"
+                >House.</span
+              ></span
+            >
+            <a
+              onclick="onToggleMenu(this)"
+              class="px-[15px] font-serif text-[12px] hover:text-green-500 mx-[10px] duration-[1s] text-white rounded md:py-0 py-[15px]"
+              href="#home"
+              >Home</a
+            >
+            <a
+              onclick="onToggleMenu(this)"
+              class="px-[15px] font-serif text-[12px] hover:text-green-500 duration-[1s] text-white roundedmd:py-0 py-[15px] mx-[10px]"
+              href="#about"
+              >About</a
+            >
+            <a
+              onclick="onToggleMenu(this)"
+              class="px-[15px] font-serif text-[12px] hover:text-green-500 duration-[1s] text-white rounded md:py-0 py-[15px] mx-[10px]"
+              href="#service"
+              >Services</a
+            >
+            <!-- <a
+              onclick="onToggleMenu(this)"
+              class="px-[15px] font-serif text-[12px] hover:text-green-500 duration-[1s] text-white rounded md:py-0 py-[15px] mx-[10px]"
+              href="#review"
+              >Review</a
+            > -->
+            <a
+              onclick="onToggleMenu(this)"
+              class="px-[15px] font-serif text-[12px] hover:text-green-500 duration-[1s] text-white rounded md:py-0 py-[15px] mx-[10px]"
+              href="#contact"
+              >Contact</a
+            >
+
+            <a
+              onclick="onToggleMenu(this)"
+              class="px-[15px] font-serif text-[12px] hover:text-green-500 duration-[1s] text-white rounded md:py-0 py-[15px] mx-[10px]"
+              href=""
+              >Menu</a
+            >
+          </nav>
+          <!-- <a
+            href="#contact"
+            class="w-[130px] text-center shadow-md shadow-sky-200 font-bold font-mono bg-sky-400 rounded-full cursor-pointer px-[10px] text-white py-[8px] hover:bg-white hover:text-black duration-[1s]"
+          >
+            Contact Me
+          </a> -->
+          <div class="lg:hidden icon sm:block md:hidden">
+            <span onclick=" onToggleMenu(this)"
+              ><ion-icon
+                class="text-white font-bold text-2xl align-middle"
+                name="menu-outline"
+              ></ion-icon
+            ></span>
+          </div>
+
+          <div class="hidden md:flex items-center gap-3">
+            <!-- <button
+              class="bg-black w-[40px] py-[8px] rounded-full h-[40px] text-orange-200"
+            >
+              <a class="text-xl font-bold" href="">
+                <ion-icon name="cart-outline"></ion-icon>
+              </a>
+            </button> -->
+            <button
+              class="bg-green-500 w-[100px] text-white text-sm py-[8px] px-[10px] font-semibold shadow shadow-green-300 rounded-2xl flex items-center place-content-center gap-1 hover:bg-white hover:text-green-500 duration-[0.5s]"
+            >
+              <a class="" href="login.html">Login</a>
+              <ion-icon
+                class="text-lg font-bold"
+                name="person-outline"
+              ></ion-icon>
+            </button>
+          </div>
+        </header>
+      </header>
+      <!-- header end  -->
+      <!-- hero  -->
+      <div class="w-[95%] mx-auto min-h-screen md:min-h-[70vh]">
+        <div class="w-full md:pt-[100px] pt-[150px]">
+          <h1 class="text-white text-5xl animate font-bold md:w-[480px]">
+            The <span class="text-green-500">best</span> quality
+            <span class="text-green-500">food</span> of your choice
+          </h1>
+          <p
+            class="text-sm font-serif animate text-white pt-[10px] md:w-[500px]"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+            vitae exercitationem provident corrupti id fuga ut ullam
+            consequuntur, nulla odit excepturi mollitia amet veritatis optio
+            repellendus voluptates dicta iusto aut.
+          </p>
+          <div class="flex gap-3 animate pt-[10px]">
+            <button
+              class="py-[7px] flex items-center place-content-center mt-[10px] px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+            >
+              Order
+              <ion-icon
+                class="text-lg font-bold"
+                name="cart-outline"
+              ></ion-icon>
+            </button>
+
+            <button
+              class="py-[7px] flex items-center place-content-center mt-[10px] px-[10px] bg-white text-green-500 font-semibold text-sm rounded-2xl w-[120px] hover:bg-green-500 hover:text-white duration-[0.5s] gap-1"
+            >
+              <a class="" href="login.html">Login</a>
+              <ion-icon
+                class="text-lg font-bold"
+                name="person-outline"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- hero-ends -->
+    </div>
+    <!-- main contain end  -->
+    <section id="about" class="w-full py-[60px] md:h-screen">
+      <div class="pt-[20px] w-[95%] mx-auto flex md:flex-row flex-col">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="md:w-[50%] md:h-[350px] w-full relative"
+        >
+          <img
+            class="h-[inherit] rounded-md w-[90%] mx-auto"
+            src="image/pexels-malidate-van-784633.jpg"
+            alt=""
+          />
+          <img
+            class="h-[150px] w-[200px] rounded-md absolute z-[100] shadow shadow-black bottom-[-30px]"
+            src="image/pizza2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="md:w-[50%] w-full md:h-[350px] pt-[70px] p-[10px]">
+          <span
+            data-aos="fade-up"
+            data-aos-duration="500"
+            class="h-[2px] bg-green-500 w-[100px] rounded-md block"
+          ></span>
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="text-3xl font-semibold font-serif pt-[10px]"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+            quae.
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="text-sm pt-[20px]"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
+            mollitia similique id consequatur voluptate quis aliquid, labore rem
+            fugit assumenda. Assumenda iure qui dolore nam, sequi ad similique
+            quas excepturi culpa dolorum dolorem doloremque optio quo sunt
+            corporis, reiciendis recusandae.
+          </p>
+          <button
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="py-[7px] flex items-center place-content-center mt-[25px] px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl hover:bg-white hover:text-green-500 duration-[0.5s]"
+          >
+            Book a Resveration
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-[50px]">
+      <div class="w-[95%] mx-auto">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="text-center flex flex-col items-center p-[10px]"
+        >
+          <h2 class="text-2xl font-bold font-serif">
+            Explore Our Feature Recipes
+          </h2>
+          <span
+            class="h-[2px] bg-green-500 w-[100px] my-[10px] rounded-md block"
+          ></span>
+          <p class="md:w-[500px] text-xs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            illum quas possimus nobis minima! Deserunt distinctio voluptas
+            soluta sapiente ab.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-3 pt-[20px] grid-cols-1">
+          <!-- first  -->
+          <div
+            data-aos="fade-up"
+            data-aos-duration="500"
+            class="h-[400px] shadow-md shadow-black"
+          >
+            <div class="w-[95%] mx-auto mt-[10px] h-[200px]">
+              <img
+                class="h-[inherit] w-full rounded-md"
+                src="image/chicken.jpg"
+                alt=""
+              />
+            </div>
+            <div class="h-[140px] px-[10px]">
+              <h3 class="font-bold text-sm">Chicken Pizza</h3>
+              <span class="text-xs bg-green-500 px-[5px] rounded-md"
+                >special</span
+              >
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+                fuga dolorem doloremque placeat ut culpa vel soluta consequatur
+                numquam quia.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-400 h-[60px] flex place-content-center py-[10px]"
+            >
+              <button
+                class="py-[6px] flex items-center place-content-center px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+              >
+                Order
+                <ion-icon
+                  class="text-lg font-bold"
+                  name="cart-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+          <!-- first end  -->
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="h-[400px] shadow-md shadow-black"
+          >
+            <div class="w-[95%] mx-auto mt-[10px] h-[200px]">
+              <img
+                class="h-[inherit] w-full rounded-md"
+                src="image/meet.jpg"
+                alt=""
+              />
+            </div>
+            <div class="h-[140px] px-[10px]">
+              <h3 class="font-bold text-sm">Beef Pizza</h3>
+              <span class="text-xs bg-green-500 px-[5px] rounded-md"
+                >special</span
+              >
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+                fuga dolorem doloremque placeat ut culpa vel soluta consequatur
+                numquam quia.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-400 h-[60px] flex place-content-center py-[10px]"
+            >
+              <button
+                class="py-[6px] flex items-center place-content-center px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+              >
+                Order
+                <ion-icon
+                  class="text-lg font-bold"
+                  name="cart-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="h-[400px] shadow-md shadow-black"
+          >
+            <div class="w-[95%] mx-auto mt-[10px] h-[200px]">
+              <img
+                class="h-[inherit] w-full rounded-md"
+                src="image/peperoni.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="h-[140px] px-[10px]">
+              <h3 class="font-bold text-sm">Pepperoni Pizza</h3>
+              <span class="text-xs bg-green-500 px-[5px] rounded-md"
+                >special</span
+              >
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+                fuga dolorem doloremque placeat ut culpa vel soluta consequatur
+                numquam quia.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-400 h-[60px] flex place-content-center py-[10px]"
+            >
+              <button
+                class="py-[6px] flex items-center place-content-center px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+              >
+                Order
+                <ion-icon
+                  class="text-lg font-bold"
+                  name="cart-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="h-[400px] shadow-md shadow-black"
+          >
+            <div class="w-[95%] mx-auto mt-[10px] h-[200px]">
+              <img
+                class="h-[inherit] w-full rounded-md"
+                src="image/cheese.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="h-[140px] px-[10px]">
+              <h3 class="font-bold text-sm">Cheese Pizza</h3>
+              <span class="text-xs bg-green-500 px-[5px] rounded-md"
+                >special</span
+              >
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+                fuga dolorem doloremque placeat ut culpa vel soluta consequatur
+                numquam quia.
+              </p>
+            </div>
+            <div
+              class="bg-neutral-400 h-[60px] flex place-content-center py-[10px]"
+            >
+              <button
+                class="py-[6px] flex items-center place-content-center px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+              >
+                Order
+                <ion-icon
+                  class="text-lg font-bold"
+                  name="cart-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex place-content-center mt-[25px]">
+          <button
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            class="py-[6px] flex items-center place-content-center px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+          >
+            <a href="">View More</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="service" class="w-full py-[50px] mt-[30px]">
+      <div class="pt-[20px] w-[95%] mx-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="text-center flex flex-col items-center p-[10px]"
+        >
+          <h2 class="text-2xl font-bold font-serif">Why Order from us?</h2>
+          <span
+            class="h-[2px] bg-green-500 w-[100px] my-[10px] rounded-md block"
+          ></span>
+          <p class="md:w-[500px] text-xs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            illum quas possimus nobis minima! Deserunt distinctio voluptas
+            soluta sapiente ab.
+          </p>
+        </div>
+        <div
+          class="grid md:grid-cols-3 gap-3 pt-[50px] md:pt-[20px] grid-cols-1"
+        >
+          <!-- first  -->
+          <div data-aos="zoom-in" data-aos-duration="500">
+            <span class="text-4xl font-bold text-green-500 block text-center">
+              <ion-icon name="flash-outline"></ion-icon>
+            </span>
+            <h3
+              class="font-serif text-lg pt-[10px] text-center capitalize font-bold"
+            >
+              Delivery Within minitues
+            </h3>
+            <p class="capitalize text-xs text-center pt-[10px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              architecto dignissimos vero recusandae nam consectetur
+              reprehenderit aspernatur? Nostrum tenetur assumenda iure nobis,
+              voluptatibus voluptatem, at inventore nemo modi, labore quod!
+            </p>
+          </div>
+          <!-- first end  -->
+          <div data-aos="zoom-in" data-aos-duration="1000">
+            <span class="text-4xl font-bold text-green-500 block text-center">
+              <ion-icon name="leaf-outline"></ion-icon>
+            </span>
+            <h3
+              class="font-serif text-lg pt-[10px] text-center capitalize font-bold"
+            >
+              Fresh ingredients
+            </h3>
+            <p class="capitalize text-xs text-center pt-[10px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              architecto dignissimos vero recusandae nam consectetur
+              reprehenderit aspernatur? Nostrum tenetur assumenda iure nobis,
+              voluptatibus voluptatem, at inventore nemo modi, labore quod!
+            </p>
+          </div>
+          <div data-aos="zoom-in" data-aos-duration="1500">
+            <span class="text-4xl font-bold text-green-500 block text-center">
+              <ion-icon name="people-outline"></ion-icon>
+            </span>
+            <h3
+              class="font-serif text-lg pt-[10px] text-center capitalize font-bold"
+            >
+              24/7 customer Service
+            </h3>
+            <p class="capitalize text-xs text-center pt-[10px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              architecto dignissimos vero recusandae nam consectetur
+              reprehenderit aspernatur? Nostrum tenetur assumenda iure nobis,
+              voluptatibus voluptatem, at inventore nemo modi, labore quod!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-[50px]">
+      <div
+        class="smallbg w-full md:h-[300px] h-[400px] flex flex-col place-content-center"
+      >
+        <div class="md:w-[60%] mx-auto">
+          <h3
+            data-aos="fade-up"
+            data-aos-duration="500"
+            class="text-white text-2xl font-serif font-bold text-center"
+          >
+            Lorem, ipsum dolor sit amet consectetur <br />
+            adipisicing elit. Doloremque, magni!
+          </h3>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="md:w-[500px] mx-auto text-center text-white text-sm"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+            perspiciatis adipisci maxime dolores animi odio eveniet eum aut
+            rerum. Impedit iste alias earum repudiandae voluptatibus omnis. Ex
+            ducimus corporis sint?
+          </p>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="flex gap-3 place-content-center pt-[10px]"
+          >
+            <button
+              class="py-[7px] flex items-center place-content-center mt-[10px] px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-[120px] hover:bg-white hover:text-green-500 duration-[0.5s] gap-1"
+            >
+              Order
+              <ion-icon
+                class="text-lg font-bold"
+                name="cart-outline"
+              ></ion-icon>
+            </button>
+
+            <button
+              class="py-[7px] flex items-center place-content-center mt-[10px] px-[10px] bg-white text-green-500 font-semibold text-sm rounded-2xl w-[120px] hover:bg-green-500 hover:text-white duration-[0.5s] gap-1"
+            >
+              <a class="" href="login.html">Login</a>
+              <ion-icon
+                class="text-lg font-bold"
+                name="person-outline"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="w-full py-[50px]">
+      <div class="pt-[20px] w-[95%] mx-auto">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="500"
+          class="text-center flex flex-col items-center p-[10px]"
+        >
+          <h2 class="text-2xl font-bold font-serif">Wanna Contact us?</h2>
+          <span
+            class="h-[2px] bg-green-500 w-[100px] my-[10px] rounded-md block"
+          ></span>
+          <p class="md:w-[500px] text-xs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            illum quas possimus nobis minima! Deserunt distinctio voluptas
+            soluta sapiente ab.
+          </p>
+        </div>
+        <div class="flex md:flex-row flex-col">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="md:w-[50%] w-[95%] mx-auto"
+          >
+            <img src="image/Contact-us.gif" alt="" />
+          </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            class="md:w-[50%] w-[95%] mx-auto"
+          >
+            <form class="w-full" action="">
+              <div class="flex flex-col mt-[30px]">
+                <label class="font-serif text-sm py-[5px]" for="name"
+                  >Name :</label
+                >
+                <input
+                  class="outline-none text-sm font-semibold w-full bg-neutral-300 rounded-md px-[10px] py-[6px]"
+                  name="name"
+                  type="text"
+                />
+              </div>
+              <div class="flex flex-col mt-[20px]">
+                <label class="font-serif text-sm py-[5px]" for="name"
+                  >Email :</label
+                >
+                <input
+                  class="outline-none text-sm font-semibold w-full bg-neutral-300 rounded-md px-[10px] py-[6px]"
+                  name="email"
+                  type="email"
+                />
+              </div>
+              <div class="flex flex-col mt-[20px]">
+                <label class="font-serif text-sm py-[5px]" for="name"
+                  >Message :</label
+                >
+                <textarea
+                  class="outline-none text-sm font-semibold w-full bg-neutral-300 rounded-md px-[10px] py-[6px]"
+                  name="message"
+                  rows="9"
+                ></textarea>
+              </div>
+              <div class="w-full">
+                <button
+                  class="py-[7px] flex items-center place-content-center mt-[10px] px-[10px] bg-green-500 text-white font-semibold text-sm rounded-2xl w-full hover:bg-white hover:text-green-500 duration-[0.5s] hover:border border-green-500 gap-1"
+                >
+                  Send
+                  <ion-icon
+                    class="text-lg pt-[3px] font-bold"
+                    name="send-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="w-full py-[10px] bg-green-500">
+      <div
+        class="w-[95%] flex md:flex-row flex-col mx-auto border-2 rounded-t-md px-[10px] text-white items-center md:h-[250px]"
+      >
+        <div class="md:h-[200px] p-[5px] md:w-[40%] w-full">
+          <!-- <h2 class="font-bold">Join Our newsletter for more info</h2> -->
+          <div class="flex items-center md:pt-0 pt-[10px]">
+            <p class="text-white text-xs">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
+              consectetur praesentium, doloribus obcaecati dignissimos, illum
+              neque quas, magnam molestias quaerat reiciendis eius facere.
+              Aliquid, doloribus.
+            </p>
+          </div>
+          <p class="text-sm pt-[10px] font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quo
+            at modi quasi expedita, nesciunt dolor odio iste officiis repellat.
+          </p>
+        </div>
+
+        <div class="md:h-[200px] p-[5px] md:w-[20%] w-full">
+          <h2 class="font-bold">Navigators</h2>
+          <div class="flex flex-col gap-1">
+            <a href="">Home</a>
+            <a href="">Service</a>
+            <a href="">Featured Recipes</a>
+            <a href="">Menu</a>
+          </div>
+        </div>
+
+        <div class="md:h-[200px] p-[5px] md:w-[20%] w-full">
+          <h2 class="font-bold">Company</h2>
+          <div class="flex flex-col gap-1">
+            <a href="">About</a>
+            <a href="">Faq</a>
+            <a href="">Promos</a>
+            <a href="">Events</a>
+          </div>
+        </div>
+
+        <div class="md:h-[200px] p-[5px] md:w-[20%] w-full">
+          <h2 class="font-bold">Contacts</h2>
+          <div class="flex flex-col gap-1">
+            <h3>09027498484</h3>
+            <h3>09160845333</h3>
+            <a href="">okwastephen23@gmail.com</a>
+            <h3>okwastephen1@gmail.com</h3>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-2 rounded-b-md h-[60px] flex justify-between mx-auto w-[95%] px-[10px] text-white items-center"
+      >
+        <p class="font-serif mt-[10px] text-xs">&copy;2024 &bull;Pizzahouse</p>
+        <p class="font-serif mt-[10px] text-xs underline">
+          <a href="">Tems&Conditions</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      const nav_links = document.querySelector(".nav_links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        nav_links.classList.toggle("left-[0%]");
+      }
+    </script>
+    <script src="css/aos-master/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

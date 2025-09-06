@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nature</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/aos-master/dist/aos.css" />
+    <link rel="stylesheet" href="css/nature.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <style>
+    .mainBack {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+
+    .cards {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+    .small {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+  </style>
+  <body class="bg-yellow-100">
+    <div
+      class="mainBack relative w-full min-h-screen pb-[15px] rounded-b-[150px]"
+    >
+      <video
+        class="absolute top-0 h-screen object-cover w-full z-[-1] rounded-b-[150px]"
+        loop
+        muted
+        autoplay
+        plays-inline
+        type="video/mp4"
+        src="video/nature3.mp4"
+      ></video>
+      <!-- header  -->
+      <header
+        class="flex md:-full sticky md:overflow-hidden z-[100] mx-auto bg-transparent px-[20px] items-center justify-between w-full h-[65px]"
+      >
+        <span
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="md:w-[15%] text-white font-extrabold text-xl text-center cursor-pointer w-[25%] py-[15px] h-[60px]"
+          >Wild<span
+            style="
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+                sans-serif;
+            "
+            class="text-yellow-600"
+            >Stride.</span
+          ></span
+        >
+        <nav
+          class="nav_links md:static md:min-h-fit h-screen md:w-auto md:items-center md:bg-transparent flex md:flex-row lg:bg-transparent bg-black w-[70%] duration-[0.5s] md:z-0 z-[100] text-start py-[15px] flex-col absolute top-[0%] left-[-100%]"
+        >
+          <span
+            class="md:w-[15%] text-white font-extrabold text-xl md:hidden block text-center cursor-pointer pl-[20px] w-[25%] py-[15px] h-[60px]"
+            >Wild<span
+              style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+              "
+              class="text-yellow-600 text-sm"
+              >Stride.</span
+            ></span
+          >
+          <a
+            onclick="onToggleMenu(this)"
+            class="px-[15px] font-serif md:text-xs text-[14px] hover:text-yellow-600 mx-[10px] duration-[1s] text-white rounded py-[15px]"
+            href="#home"
+            >Home</a
+          >
+          <a
+            onclick="onToggleMenu(this)"
+            class="px-[15px] font-serif md:text-xs text-[14px] hover:text-yellow-600 duration-[1s] text-white rounded py-[15px] mx-[10px]"
+            href="#about"
+            >About</a
+          >
+          <a
+            onclick="onToggleMenu(this)"
+            class="px-[15px] font-serif md:text-xs text-[14px] hover:text-yellow-600 duration-[1s] text-white rounded py-[15px] mx-[10px]"
+            href="#service"
+            >Services</a
+          >
+          <a
+            onclick="onToggleMenu(this)"
+            class="px-[15px] font-serif md:text-xs text-[14px] hover:text-yellow-600 duration-[1s] text-white rounded py-[15px] mx-[10px]"
+            href="#review"
+            >Contact</a
+          >
+          <a
+            onclick="onToggleMenu(this)"
+            class="px-[15px] font-serif md:text-xs text-[14px] hover:text-yellow-600 duration-[1s] text-white rounded py-[15px] mx-[10px]"
+            href="#contact"
+            >Blogs</a
+          >
+
+          <!-- <a
+            onclick="onToggleMenu(this)"
+            class="px-[15px] font-serif md:text-xs text-[14px] hover:text-yellow-600 duration-[1s] text-white rounded py-[15px] mx-[10px]"
+            href=""
+            >Collections</a
+          > -->
+        </nav>
+        <!-- <a
+          href="#contact"
+          class="w-[130px] text-center shadow-md shadow-sky-200 font-bold font-mono bg-sky-400 rounded-full cursor-pointer px-[10px] text-white py-[8px] hover:bg-white hover:text-black duration-[1s]"
+        >
+          Contact Me
+        </a> -->
+        <div class="lg:hidden sm:block md:hidden">
+          <span onclick=" onToggleMenu(this)"
+            ><ion-icon
+              class="text-white font-bold text-2xl align-middle"
+              name="menu-outline"
+            ></ion-icon
+          ></span>
+        </div>
+
+        <div class="hidden md:block">
+          <button
+            class="bg-yellow-600 w-[100px] font-semibold flex place-content-center text-white duration-[0.5s] hover:bg-transparent hover:border border-white hover:text-white text-sm py-[7px] px-[10px] shadow rounded-2xl"
+          >
+            <a class="text-sm flex items-center" href=""
+              >Explore
+              <span class="text-xl px-[3px] flex align-middle"
+                ><ion-icon
+                  class="align-middle rotate-[320deg]"
+                  name="arrow-forward-circle-sharp"
+                ></ion-icon></span
+            ></a>
+          </button>
+        </div>
+      </header>
+      <!-- header-ends  -->
+      <!-- hero-end  -->
+      <div class="w-full">
+        <div class="w-[95%] mx-auto">
+          <div
+            class="flex flex-col place-content-center items-center w-full min-h-[80vh]"
+          >
+            <h1
+              style="font-family: 'Courier New', Courier, monospace"
+              class="md:text-xl text-lg text-center animate font-semibold capitalize text-white"
+            >
+              Discover wonders with every step
+            </h1>
+            <span
+              class="h-[2px] bg-yellow-600 animate w-[100px] my-[10px] rounded-md block"
+            ></span>
+            <p
+              class="text-6xl text-white text-center animate uppercase font-serif"
+            >
+              your adventure <br />
+              starts here
+            </p>
+            <div class="mt-[20px] animate">
+              <button
+                class="w-[170px] h-[40px] text-sm rounded-2xl px-[10px] hover:border hover:bg-transparent duration-[0.5s] font-semibold text-white bg-yellow-600 font-serif flex items-center place-content-center"
+              >
+                <a class="block px-[5px] text-sm" href="">Discover More</a>
+                <span class="block pt-[6px]">
+                  <ion-icon name="arrow-forward-outline"></ion-icon
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hero-end  -->
+    </div>
+    <!-- about us  -->
+    <section class="w-full py-[60px]">
+      <div class="w-[95%] mx-auto">
+        <div class="w-full flex md:flex-row flex-col pt-[50px]">
+          <div class="md:w-[50%] md:h-[400px] w-full">
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="500"
+              class="text-yellow-500 uppercase font-light"
+            >
+              A few words about us
+            </h2>
+            <h3
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              class="text-5xl capitalize pt-[10px] font-serif"
+            >
+              Why we are best at adventures
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="text-yellow-500 capitalize font-light pt-[10px]"
+            >
+              The story of wildstride.
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="pt-[10px] text-sm font-semibold"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              aliquam dolor libero blanditiis ratione, minus doloribus quidem
+              iusto odit in provident itaque quaerat possimus a enim dolore
+              praesentium iste maxime quo sunt optio impedit voluptatibus!
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="pt-[10px] text-sm font-semibold"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Excepturi sequi qui accusantium porro architecto eum dolores
+              accusamus facilis debitis? Neque tempore excepturi nam facere quo
+              dicta omnis aperiam alias impedit voluptatem nulla magni labore,
+              eum, voluptatum praesentium perferendis maiores illum?
+            </p>
+            <button
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="bg-yellow-600 mt-[15px] text-white text-sm font-semibold w-[100px] rounded-2xl px-[10px] py-[5px]"
+            >
+              More
+            </button>
+          </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            class="md:w-[50%] md:h-[400px] h-[300px] w-full md:pt-0 pt-[25px]"
+          >
+            <img
+              class="h-[inherit] rounded-md"
+              src="image/hotel_2.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about us end  -->
+    <section class="w-full py-[60px]">
+      <div class="w-[95%] mx-auto">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="md:w-[45%] mx-auto items-center flex flex-col"
+        >
+          <h2 class="text-2xl font-serif">Explore Your Adventure</h2>
+          <span
+            class="h-[2px] bg-yellow-600 w-[100px] my-[10px] rounded-md block"
+          ></span>
+          <p class="text-center text-xs">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+            sint laboriosam quibusdam illum! Laboriosam facere alias veritatis
+            repudiandae commodi deserunt?
+          </p>
+        </div>
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-3 pt-[25px]">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            class="w-full relative h-[400px] rounded-xl cards"
+          >
+            <img
+              class="absolute object-cover rounded-xl z-[-1] w-full h-[inherit]"
+              src="image/naturep2.jpeg"
+              alt=""
+            />
+            <div
+              class="h-[inherit] flex flex-col place-content-end items-center py-[20px]"
+            >
+              <h3
+                style="font-family: cursive"
+                class="text-white text-sm pb-[5px]"
+              >
+                Rivers Of Mero
+              </h3>
+              <button
+                class="w-[170px] h-[40px] text-sm rounded-2xl px-[10px] hover:border hover:bg-transparent duration-[0.5s] font-semibold text-white bg-yellow-600 font-serif flex items-center place-content-center"
+              >
+                <a class="block px-[5px] text-sm" href="">Discover More</a>
+                <span class="block pt-[6px]">
+                  <ion-icon name="arrow-forward-outline"></ion-icon
+                ></span>
+              </button>
+            </div>
+          </div>
+          <!-- first card  -->
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="w-full relative h-[400px] rounded-xl cards"
+          >
+            <img
+              class="absolute object-cover rounded-xl z-[-1] w-full h-[inherit]"
+              src="image/naturep.jpg"
+              alt=""
+            />
+            <div
+              class="h-[inherit] flex flex-col place-content-end items-center py-[20px]"
+            >
+              <h3
+                style="font-family: cursive"
+                class="text-white text-sm pb-[5px]"
+              >
+                Land Of Spring
+              </h3>
+              <button
+                class="w-[170px] h-[40px] text-sm rounded-2xl px-[10px] hover:border hover:bg-transparent duration-[0.5s] font-semibold text-white bg-yellow-600 font-serif flex items-center place-content-center"
+              >
+                <a class="block px-[5px] text-sm" href="">Discover More</a>
+                <span class="block pt-[6px]">
+                  <ion-icon name="arrow-forward-outline"></ion-icon
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            class="w-full relative h-[400px] rounded-xl cards"
+          >
+            <img
+              class="absolute object-cover rounded-xl z-[-1] w-full h-[inherit]"
+              src="image/naturep3.jpg"
+              alt=""
+            />
+            <div
+              class="h-[inherit] flex flex-col place-content-end items-center py-[20px]"
+            >
+              <h3
+                style="font-family: cursive"
+                class="text-white text-sm pb-[5px]"
+              >
+                Mount Nebo
+              </h3>
+              <button
+                class="w-[170px] h-[40px] text-sm rounded-2xl px-[10px] hover:border hover:bg-transparent duration-[0.5s] font-semibold text-white bg-yellow-600 font-serif flex items-center place-content-center"
+              >
+                <a class="block px-[5px] text-sm" href="">Discover More</a>
+                <span class="block pt-[6px]">
+                  <ion-icon name="arrow-forward-outline"></ion-icon
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            class="w-full relative h-[400px] rounded-xl cards"
+          >
+            <img
+              class="absolute object-cover rounded-xl z-[-1] w-full h-[inherit]"
+              src="image/naturep4.jpg"
+              alt=""
+            />
+            <div
+              class="h-[inherit] flex flex-col place-content-end items-center py-[20px]"
+            >
+              <h3
+                style="font-family: cursive"
+                class="text-white text-sm pb-[5px]"
+              >
+                Garden Of Peace
+              </h3>
+              <button
+                class="w-[170px] h-[40px] text-sm rounded-2xl px-[10px] hover:border hover:bg-transparent duration-[0.5s] font-semibold text-white bg-yellow-600 font-serif flex items-center place-content-center"
+              >
+                <a class="block px-[5px] text-sm" href="">Discover More</a>
+                <span class="block pt-[6px]">
+                  <ion-icon name="arrow-forward-outline"></ion-icon
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full relative h-[300px] small mt-[20px]">
+      <video
+        class="absolute top-0 h-[300px] object-cover w-full z-[-1]"
+        loop
+        muted
+        autoplay
+        plays-inline
+        type="video/mp4"
+        src="video/nature2.mp4"
+      ></video>
+      <div class="w-[95%] h-[inherit] mx-auto">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="text-white md:w-[50%] text-center h-[inherit] place-content-center items-center mx-auto"
+        >
+          <h2 class="text-3xl capitalize font-bold py-[5px]">
+            Get Closer to nature
+          </h2>
+          <p class="text-xs">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            libero mollitia provident vel totam accusamus tempora rerum
+            assumenda, excepturi architecto corporis cupiditate laborum et
+            officiis, nemo minima sit! Eveniet, quidem?
+          </p>
+          <div class="mt-[20px] flex place-content-center">
+            <button
+              class="w-[170px] h-[40px] text-sm rounded-2xl px-[10px] hover:border hover:bg-transparent duration-[0.5s] font-semibold text-white bg-yellow-600 font-serif flex items-center place-content-center"
+            >
+              <a class="block px-[5px] text-sm" href="">Discover More</a>
+              <span class="block pt-[6px]">
+                <ion-icon name="arrow-forward-outline"></ion-icon
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full py-[60px] md:pt-[80px] bg-yellow-100">
+      <div class="w-[95%] mx-auto">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="md:w-[45%] mx-auto items-center flex flex-col"
+        >
+          <h2 class="text-2xl font-serif">Our Blogs</h2>
+          <span
+            class="h-[2px] bg-yellow-600 w-[100px] my-[10px] rounded-md block"
+          ></span>
+          <p class="text-center text-xs">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+            sint laboriosam quibusdam illum! Laboriosam facere alias veritatis
+            repudiandae commodi deserunt?
+          </p>
+        </div>
+        <div class="pt-[30px] grid gap-2 md:grid-cols-3 grid-cols-1">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="500"
+            class="h-[400px] bg-white rounded-xl shadow-md p-[10px]"
+          >
+            <div class="h-[200px] w-full">
+              <img
+                class="rounded-xl h-[inherit] w-full"
+                src="image/naturep.jpg"
+                alt=""
+              />
+            </div>
+            <div class="h-[200px]">
+              <h2 class="capitalize text-lg font-bold pt-[5px]">
+                a traval beyond the sea
+              </h2>
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos maiores iste nostrum voluptatum beatae esse aperiam,
+                perspiciatis, facere reprehenderit ab dolore nobis id, cum fugit
+                est totam molestias. Expedita fugiat, nesciunt ex alias iusto
+                explicabo exercitationem! Quos impedit a fuga!
+              </p>
+              <div class="mt-[20px]">
+                <a class="font-serif font-bold text-sm" href="">See More...</a>
+              </div>
+            </div>
+          </div>
+          <!-- fyr  -->
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="h-[400px] rounded-xl bg-white shadow-md p-[10px]"
+          >
+            <div class="h-[200px] w-full">
+              <img
+                class="rounded-xl h-[inherit] w-full"
+                src="image/naturep4.jpg"
+                alt=""
+              />
+            </div>
+            <div class="h-[200px]">
+              <h2 class="capitalize text-lg font-bold pt-[5px]">
+                The Garden of peace
+              </h2>
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos maiores iste nostrum voluptatum beatae esse aperiam,
+                perspiciatis, facere reprehenderit ab dolore nobis id, cum fugit
+                est totam molestias. Expedita fugiat, nesciunt ex alias iusto
+                explicabo exercitationem! Quos impedit a fuga!
+              </p>
+              <div class="mt-[20px]">
+                <a class="font-serif font-bold text-sm" href="">See More...</a>
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="h-[400px] rounded-xl bg-white shadow-md p-[10px]"
+          >
+            <div class="h-[200px] w-full">
+              <img
+                class="rounded-xl h-[inherit] w-full"
+                src="image/naturep3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="h-[200px]">
+              <h2 class="capitalize text-lg font-bold pt-[5px]">
+                The Mount Nebo
+              </h2>
+              <p class="text-xs pt-[10px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos maiores iste nostrum voluptatum beatae esse aperiam,
+                perspiciatis, facere reprehenderit ab dolore nobis id, cum fugit
+                est totam molestias. Expedita fugiat, nesciunt ex alias iusto
+                explicabo exercitationem! Quos impedit a fuga!
+              </p>
+              <div class="mt-[20px]">
+                <a class="font-serif font-bold text-sm" href="">See More...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gradient-to-r bg-yellow-600 py-[30px] w-full">
+      <div class="pt-[20px]">
+        <h2 class="capitalize text-white text-2xl font-bold text-center">
+          Subscribe Our Newsletter
+        </h2>
+      </div>
+      <div
+        class="w-[95%] flex gap-0 mt-[20px] mx-auto px-[30px] bg-white rounded py-[30px]"
+      >
+        <input
+          class="outline-none rounded-tl-md rounded-bl-md border-2 w-[80%] border-yellow-600 py-[10px] px-[10px]"
+          type="text"
+          name=""
+          id=""
+        />
+        <button
+          class="py-[10px] rounded-tr-md rounded-br-md px-[10px] w-[150px] text-white bg-yellow-600"
+        >
+          Subscribe
+        </button>
+      </div>
+
+      <div class="grid lg:grid-cols-4 w-[95%] mx-auto py-[20px] grid-cols-1">
+        <div class="">
+          <span class="text-white text-lg font-bold py-[10px]"
+            >Our Company</span
+          >
+          <p class="text-white text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            est odio soluta quibusdam. Vitae voluptatum, voluptatibus dolores
+            commodi tenetur, saepe fugiat amet deserunt modi iure, dolore illum.
+            Unde, temporibus eligendi.
+          </p>
+        </div>
+
+        <div class="md:text-center">
+          <span class="text-white block text-lg font-bold py-[8px]"
+            >Explore</span
+          >
+          <a href="#home" class="text-white block text-sm py-[1px]">Home</a>
+          <a href="#about" class="text-white block text-sm py-[1px]">About</a>
+          <a href="#faq" class="text-white block text-sm py-[1px]">Faq</a>
+          <a href="#contact" class="text-white block text-sm py-[1px]"
+            >Contact</a
+          >
+        </div>
+
+        <div class="">
+          <span class="text-white block text-lg font-bold py-[8px]"
+            >Contats</span
+          >
+          <a href="" class="text-white block text-sm py-[1px]"
+            >Phone: 09027498384
+          </a>
+          <a href="#layers" class="text-white block text-sm py-[1px]"
+            >Email: support@hotel.com
+          </a>
+          <a href="" class="text-white block text-sm py-[1px]">Loans</a>
+          <a href="#contact" class="text-white block text-sm py-[1px]"
+            >Service</a
+          >
+        </div>
+
+        <div class="">
+          <span class="text-white text-lg font-bold py-[10px]">Help</span>
+          <p class="text-white text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et
+            repellendus maiores sapiente repellat quas possimus, perspiciatis,
+            corrupti eaque reprehenderit odio sed alias ratione. Quia ut
+            repellat quod accusamus quae!
+          </p>
+        </div>
+      </div>
+      <hr class="w-[95%] mx-auto" />
+      <div class="flex py-[20px] w-[95%] mx-auto justify-between">
+        <p class="text-[12px] text-white">
+          &copy;Wildstride &bull;2024 All Rights Reserved
+        </p>
+        <p class="text-white text-[12px]">Tems&Condditions</p>
+      </div>
+      <hr class="w-[95%] mx-auto" />
+    </footer>
+
+    <script>
+      const nav_links = document.querySelector(".nav_links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        nav_links.classList.toggle("left-[0%]");
+      }
+    </script>
+    <script src="css/aos-master/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

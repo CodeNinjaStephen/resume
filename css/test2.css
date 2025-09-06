@@ -1,0 +1,15 @@
+.homeImg {
+  /* display: block; */
+  transition: 2s;
+  animation: cool 2.5s ease-in-out infinite;
+  transform: translateY(0px);
+}
+
+@keyframes cool {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
